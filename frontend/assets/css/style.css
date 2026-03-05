@@ -1,0 +1,79 @@
+/* frontend/assets/css/style.css */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wrapper to hold Sidebar and Content side-by-side */
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+/* Premium Sidebar Styling */
+#sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Override Bootstrap Accordion Styles for Dark Sidebar */
+.accordion-button::after {
+    filter: invert(1);
+    /* Makes the dropdown arrow white */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #343a40 !important;
+    /* Keep it dark when active */
+    color: white !important;
+    box-shadow: none;
+}
+
+.sidebar-link:hover,
+.accordion-button:hover {
+    background-color: #495057 !important;
+}
+
+/* Sublinks inside the accordion */
+.sidebar-sublink {
+    display: block;
+    padding: 12px 20px 12px 45px;
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.sidebar-sublink:hover {
+    color: #ffffff;
+    background-color: #495057;
+    padding-left: 50px;
+    /* Slight indent animation on hover */
+}
+
+/* Main Content Area */
+#content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+/* Custom KPI Card Styling for the Dashboard */
+.kpi-card {
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
